@@ -33,5 +33,15 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+<script>
+  document.addEventListener('click', () => {
+    const audio = document.getElementById('myAudio');
+    if (audio.paused) {
+      audio.volume = 0.5;
+      audio.play();
+    }
+  });
+</script>
+    
   }
 }
